@@ -19,6 +19,37 @@ WindowsApplication44
 	<summary>
   A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
+</member><member name="M:WindowsApplication44.Form1.Dispose(System.Boolean)">
+	<summary>
+ 處置 (Dispose) Form1 所使用的資源 (除了記憶體之外)。
+ </summary>
+	<param name="disposing">true，表示釋放 Managed 和 Unmanaged 資源；false，表示只釋放 Unmanaged 資源。</param>
+	<remarks></remarks>
+</member><member name="M:WindowsApplication44.Form1.ConvertToChineseNumbers(System.Int64)">
+	<summary>
+ 把指定之整數轉為中國大寫數字。
+ </summary>
+	<param name="inputNumber">要轉換的數值。</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:WindowsApplication44.Form1.GetPriceWithTax(System.Int64,System.Double,System.Int64@)">
+	<summary>
+ 計算指定之銀碼之含稅價格與相應稅金。
+ </summary>
+	<param name="inputNumber">要轉換的數值。</param>
+	<param name="taxRate">用以計算的稅率。</param>
+	<param name="taxValue">用以傳回包含計算出之稅金之參數。</param>
+	<returns>計算出之含稅價格。</returns>
+	<remarks></remarks>
+</member><member name="M:WindowsApplication44.Form1.GetPriceWithoutTax(System.Int64,System.Double,System.Int64@)">
+	<summary>
+ 計算指定之銀碼之除稅價格與相應稅金。
+ </summary>
+	<param name="inputNumber">要轉換的數值。</param>
+	<param name="taxRate">用以計算的稅率。</param>
+	<param name="taxValue">用以傳回包含出之計算稅金之參數。</param>
+	<returns>計算出之除稅價格。</returns>
+	<remarks></remarks>
 </member>
 </members>
 </doc>

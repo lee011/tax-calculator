@@ -3,6 +3,11 @@ Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form 覆寫 Dispose 以清除元件清單。
+    ''' <summary>
+    ''' 處置 (Dispose) Form1 所使用的資源 (除了記憶體之外)。
+    ''' </summary>
+    ''' <param name="disposing">true，表示釋放 Managed 和 Unmanaged 資源；false，表示只釋放 Unmanaged 資源。</param>
+    ''' <remarks></remarks>
     <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
