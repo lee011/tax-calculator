@@ -23,7 +23,7 @@ Public Class Form1
     ''' 把指定之整數轉為中國大寫數字。
     ''' </summary>
     ''' <param name="inputNumber">要轉換的數值。</param>
-    ''' <returns></returns>
+    ''' <returns>已轉換之中國大寫數字。</returns>
     ''' <remarks></remarks>
     Public Function ConvertToChineseNumbers(inputNumber As Long) As String
 
@@ -83,10 +83,10 @@ Public Class Form1
     ''' 計算指定之銀碼之含稅價格與相應稅金。
     ''' </summary>
     ''' <param name="inputNumber">要轉換的數值。</param>
-    ''' <param name="taxRate">用以計算的稅率。</param>
+    ''' <param name="taxRate">要用以計算的稅率。</param>
     ''' <param name="taxValue">用以傳回包含計算出之稅金之參數。</param>
     ''' <returns>計算出之含稅價格。</returns>
-    ''' <remarks></remarks>
+    ''' <remarks>計算出的價格將從方法傳回值傳回，而稅金將從 taxValue 參數傳回。</remarks>
     Public Function GetPriceWithTax(inputNumber As Long, taxRate As Double, ByRef taxValue As Long) As Long
         Dim r As Double = inputNumber * (1 + taxRate)
         taxValue = inputNumber * taxRate
@@ -97,10 +97,10 @@ Public Class Form1
     ''' 計算指定之銀碼之除稅價格與相應稅金。
     ''' </summary>
     ''' <param name="inputNumber">要轉換的數值。</param>
-    ''' <param name="taxRate">用以計算的稅率。</param>
-    ''' <param name="taxValue">用以傳回包含出之計算稅金之參數。</param>
+    ''' <param name="taxRate">要用以計算的稅率。</param>
+    ''' <param name="taxValue">用以傳回包含計算出之稅金之參數。</param>
     ''' <returns>計算出之除稅價格。</returns>
-    ''' <remarks></remarks>
+    ''' <remarks>計算出的價格將從方法傳回值傳回，而稅金將從 taxValue 參數傳回。</remarks>
     Public Function GetPriceWithoutTax(inputNumber As Long, taxRate As Double, ByRef taxValue As Long) As Long
         Dim r As Double = inputNumber / (1 + taxRate)
         taxValue = inputNumber - r
